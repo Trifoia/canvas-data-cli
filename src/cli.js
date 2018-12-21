@@ -6,6 +6,7 @@ var Sync = require('./Sync')
 var Config = require('./ConfigTask')
 var Unpack = require('./Unpack')
 var Fetch = require('./Fetch')
+var FetchMany = require('./FetchMany')
 var Grab = require('./Grab')
 var List = require('./List')
 
@@ -58,6 +59,24 @@ var cli = yargs
       type: 'string'
     })
   })
+  .command('fetchmany', 'fetch a comma delimited list of tables', (yargs) => {
+    yargs.options('config', {
+      alias: 'c',
+      demand: true,
+      describe: 'the configuration file to use',
+      type: 'string'
+    })
+    .option('tables', {
+      alias: 't',
+      describe: 'comma delimited list of tables to fetch',
+      demand: true,
+      type: 'string'
+    })
+    .option('concurrency', {
+      describe: 'the maximum number of tables to fetch at once',
+      default: 5
+    })
+  })
   .command('grab', 'grab one specific dump', (yargs) => {
     yargs.options('config', {
       alias: 'c',
@@ -95,6 +114,7 @@ var runnerMap = {
   sampleConfig: {class: Config},
   unpack: {requireConfig: true, class: Unpack},
   fetch: {requireConfig: true, class: Fetch},
+  fetchmany: {requireConfig: true, class: FetchMany},
   grab: {requireConfig: true, class: Grab},
   list: {requireConfig: true, class: List}
 }

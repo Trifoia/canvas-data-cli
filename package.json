@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha --require babel-core/register test/*Test.js",
+    "report": "nyc report",
+    "reportHtml": "nyc report --reporter=html",
     "prepublishOnly": "babel src --out-dir lib/"
   },
   "nyc": {
