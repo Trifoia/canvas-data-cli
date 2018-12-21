@@ -5,3 +5,4 @@ downloads/
 state.json
 report/
 .nyc_output/
+buildtesting/

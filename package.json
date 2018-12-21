@@ -1,10 +1,12 @@
 {
   "name": "canvas-data-cli",
-  "version": "0.7.1",
+  "version": "0.8.1",
   "description": "A CLI tool for interacting with the Canvas Data API",
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha --require babel-core/register test/*Test.js",
+    "report": "nyc report",
+    "reportHtml": "nyc report --reporter=html",
     "prepublishOnly": "babel src --out-dir lib/"
   },
   "nyc": {
