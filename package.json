@@ -1,6 +1,6 @@
 {
-  "name": "canvas-data-cli",
-  "version": "0.8.1",
+  "name": "@trifoia/canvas-data-cli",
+  "version": "0.9.0",
   "description": "A CLI tool for interacting with the Canvas Data API",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/instructure/canvas-data-cli.git"
+    "url": "git+https://github.com/trifoia/canvas-data-cli.git"
   },
   "engines": {
     "node": ">=6.0"
@@ -33,9 +33,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/instructure/canvas-data-cli/issues"
+    "url": "https://github.com/trifoia/canvas-data-cli/issues"
   },
-  "homepage": "https://github.com/instructure/canvas-data-cli#readme",
+  "homepage": "https://github.com/trifoia/canvas-data-cli#readme",
   "dependencies": {
     "async": "^1.5.0",
     "glob": "^7.1.3",
@@ -62,5 +62,9 @@
     "rimraf": "^2.4.3",
     "sinon": "^1.17.3",
     "touch": "^1.0.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }
