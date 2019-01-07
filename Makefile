@@ -7,7 +7,7 @@ compile:
 
 # Publish compiled cli to npm (Can only be done by npm user addisonj)
 publish: compile
-	npm publish
+	npm publish --access public
 
 # Globally install this version of the cli for testing purposes 
 installLocal: compile
